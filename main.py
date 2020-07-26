@@ -8,12 +8,13 @@ import json
 
 
 def main(argv):
+    print("test")
     print(argv)
     return
 
 
 
-def hello_world(request):
+def download_youtube_video(request):
     youtube_url = "https://www.youtube.com/watch?v=ZrsYIthVY-Y"
     youtube_url_array = [youtube_url]
     ydl_opts = {
