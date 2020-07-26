@@ -1,0 +1,28 @@
+import youtube_dl
+import logging
+import sys
+import os
+import json
+
+
+
+
+def main(argv):
+    print(argv)
+    return
+
+
+
+def hello_world(request):
+    youtube_url = "https://www.youtube.com/watch?v=ZrsYIthVY-Y"
+    youtube_url_array = [youtube_url]
+    ydl_opts = {
+        'outtmpl': "extract.%(ext)s",
+        'forcejson' : True
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download(youtube_url_array)
+    dirs = os.listdir(".")
+    for file in dirs:
+        print(file)
+    
