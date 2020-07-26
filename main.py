@@ -7,9 +7,9 @@ import json
 
 
 
-def main(argv):
+def main():
     print("test")
-    print(argv)
+    print(sys.argv)
     return
 
 
@@ -27,3 +27,9 @@ def download_youtube_video(request):
     for file in dirs:
         print(file)
     
+
+    
+    
+print(__name__)
+if __name__ == "__main__":
+    main()    
