@@ -8,13 +8,15 @@ import json
 
 
 def main():
-    print("test")
+    print("Running YouTube Download Script")
     print(sys.argv)
+    if len(sys.argv) > 1:
+        download_youtube_video(sys.argv[1])
     return
 
 
 
-def download_youtube_video(request):
+def download_youtube_video(youtube_url_passed_in):
     youtube_url = "https://www.youtube.com/watch?v=ZrsYIthVY-Y"
     youtube_url_array = [youtube_url]
     ydl_opts = {
