@@ -17,17 +17,29 @@ def main():
 
 
 def download_youtube_video(youtube_url_passed_in):
+    # detect files in current directory
+    dirs = os.listdir(".")
+    file_list = []
+    for file in dirs:
+        file_list.push(str(file))
+    print(file_list)
     youtube_url = "https://www.youtube.com/watch?v=ZrsYIthVY-Y"
     youtube_url_array = [youtube_url]
     ydl_opts = {
-        'outtmpl': "extract.%(ext)s",
-        'forcejson' : True
+        'outtmpl': "%(id)s.%(ext)s",
+        'forcejson' : True,
+        'writeinfojson' : True,
+        'write_all_thumbnails' : True,
+        'writesubtitles' : True,
+        'writeautomaticsub' : True
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download(youtube_url_array)
     dirs = os.listdir(".")
+    new_file_list = []
     for file in dirs:
-        print(file)
+        new_file_list.push(str(file))
+    print(new_file_list)
     
 
     
