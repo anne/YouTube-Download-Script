@@ -21,7 +21,7 @@ def download_youtube_video(youtube_url_passed_in):
     dirs = os.listdir(".")
     file_list = []
     for file in dirs:
-        file_list.push(str(file))
+        file_list.append(str(file))
     print(file_list)
     youtube_url = "https://www.youtube.com/watch?v=ZrsYIthVY-Y"
     youtube_url_array = [youtube_url]
@@ -38,7 +38,7 @@ def download_youtube_video(youtube_url_passed_in):
     dirs = os.listdir(".")
     new_file_list = []
     for file in dirs:
-        new_file_list.push(str(file))
+        new_file_list.append(str(file))
     print(new_file_list)
     
 
