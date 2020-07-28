@@ -24,7 +24,9 @@ def download_youtube_video(youtube_url_passed_in):
         file_list.append(str(file))
     print(file_list)
     # download youtube video
-    youtube_url = "https://www.youtube.com/watch?v=ZrsYIthVY-Y"
+    youtube_url = "https://www.youtube.com/watch?v=Z9ZIuoQDtL0"
+    if len(youtube_url_passed_in) > 15:
+        youtube_url = youtube_url_passed_in
     youtube_url_array = [youtube_url]
     ydl_opts = {
         'outtmpl': "%(id)s.%(ext)s",
